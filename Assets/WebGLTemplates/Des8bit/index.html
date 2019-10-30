@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | %UNITY_WEB_NAME%</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: UnityProgress});
+    </script>
+	
+	<link rel="stylesheet" href="/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="/funcs.js"></script>
+  </head>
+  <body>
+	<div id="header"></div>
+    <div class="webgl-content largeborder largecornercut">
+      <div id="unityContainer" style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px; margin: auto"></div>
+      <div class="footer">
+        <div class="webgl-logo" style="border-radius: 0 var(--giantBorderRadius) 0 0;"></div>
+        <div class="fullscreen smallcornercut" style="background-color: var(--color2); border-radius: var(--giantBorderRadius) 0 0 0;" onclick="unityInstance.SetFullscreen(1)"></div>
+      </div>
+    </div>
+  </body>
+</html>
